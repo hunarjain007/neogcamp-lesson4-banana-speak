@@ -16,7 +16,6 @@ btnTranslate.addEventListener("click",async ()=>{
         var inputText = textInput.value;
         var response = await fetch(getTranslationURL(inputText));
         response = await response.json()
-        console.log(response)
         outputText.innerText = response.contents.translated;
     }catch(error){
         errorHandler(error);
